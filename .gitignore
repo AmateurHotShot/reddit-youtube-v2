@@ -1,0 +1,12 @@
+__pycache__
+numpy
+profanity-filter
+Shorts
+venv
+.DS_Store
+token.pickle
+geckodriver
+geckodriver.log
+client_secret.json
+youtube.com.json
+shorts_post_info.json
