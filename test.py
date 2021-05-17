@@ -21,11 +21,5 @@ class TestClass:
         print(post_time)
                 
 
-
-            
-
-
-
-
 if __name__ == '__main__':
     TestClass.test_def()

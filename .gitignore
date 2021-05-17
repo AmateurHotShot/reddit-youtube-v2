@@ -10,3 +10,4 @@ geckodriver.log
 client_secret.json
 youtube.com.json
 shorts_post_info.json
+.vscode/settings.json

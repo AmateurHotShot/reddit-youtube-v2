@@ -29,13 +29,14 @@ post_dict = {}
 
 
 class GetPosts:
-    def __init__(self, subreddit_list):
+    def __init__(self, subreddit_list, post_limit):
         self.subreddits_list = subreddit_list
+        self.post_limit = post_limit
 
     def download_posts(self):
         count_downloads = 1
         for sub in self.subreddits_list:
-            for submission in reddit.subreddit(sub).top("day",limit=6):
+            for submission in reddit.subreddit(sub).top("day",limit=self.post_limit):
                 if submission.over_18 == False:
                     if submission.is_video == True:
                         GetPosts.get_videos(submission, sub)
