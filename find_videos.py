@@ -21,7 +21,8 @@ reddit = praw.Reddit(
 # test_subreddits = {"HighQualityGifs"}
 # test_subreddits = ['Unexpected', 'funny', 'AbruptChaos', 'yesyesyesyesno', 'nonononoyes', 'WatchPeopleDieInside', 'KidsAreFuckingStupid', ]
 # test_subreddits = ['AbruptChaos', 'WatchPeopleDieInside',]
-test_subreddits = ['Unexpected', ]
+test_subreddits = ['Unexpected', 'Whatcouldgowrong', ]
+post_limit = 10
 
 date_downloaded = date.today().strftime("%m-%d-%y")
 
@@ -67,7 +68,7 @@ class GetPosts:
     def get_gifs(submission, sub):
         print(f"downloading {submission.name}")
         img_data = requests.get(submission.url).content
-        with open(f'Shorts/Downloaded/{date_downloaded}/{submission.name}.gif', 'wb') as handler:
+        with open(f'Shorts/Downloaded/{date_downloaded}/{submission.name}.mp4', 'wb') as handler:
             handler.write(img_data)
 
     def get_length(filename):
@@ -118,4 +119,4 @@ class GetPosts:
 
 
 if __name__ == "__main__":
-    GetPosts(test_subreddits).download_posts()
+    GetPosts(test_subreddits, post_limit=post_limit).download_posts()

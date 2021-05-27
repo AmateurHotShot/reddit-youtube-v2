@@ -91,7 +91,7 @@ class YouTubeUpload:
                 "snippet": {
                 "categoryId": "23",
                 "description": YouTubeUpload.find_and_replace(clip_info),
-                "title": f"{clip_info['title']} #Shorts",
+                "title": f"{clip_info['title'][0:90]} #Shorts",
                 "tags": ["watch people die inside the best so far","reddit memes compilation","reddit videos are lazy","fresh memes to bless 2021","funny videos for babies","reddit videos that take a turn","kid memes clean","memes","try not to laugh","funny","best memes","dank memes","memes compilation","dank memes compilation","tik tok memes","funny videos","clean memes","funny vines","try not to laugh challenge","vine","try not to laugh or grin","tiktok","clean","meme","funny memes","fresh memes","try not to laugh kids"]
                 },
                 "status": {

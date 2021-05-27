@@ -19,7 +19,12 @@ class TestClass:
         begin_time = str(date.today()) + f" {post_hour}:00"
         post_time = datetime.strptime(begin_time, '%Y-%m-%d %H:%M').replace(second=0, microsecond=0).isoformat()
         print(post_time)
+
+    def testing():
+        test_string = "WCGW If I Ride Across A Lake With A Motorcycle At High Speed Thinking I Can Hydroplane On The Surface"
+        test_string = test_string[0:90]
+        print(test_string)
                 
 
 if __name__ == '__main__':
-    TestClass.test_def()
+    TestClass.testing()
