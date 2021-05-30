@@ -79,7 +79,7 @@ class GetPosts:
             cmd_list,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT)
-        if result.stdout.decode() == "N/A":
+        if result.stdout.decode() == "N/A\n":
             return 0
         else:
             return float(result.stdout)
