@@ -79,7 +79,10 @@ class GetPosts:
             cmd_list,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT)
-        return float(result.stdout)
+        if result.stdout.decode() == "N/A":
+            return 0
+        else:
+            return float(result.stdout)
 
 
     def write_to_json(submission, sub, count_downloads):
