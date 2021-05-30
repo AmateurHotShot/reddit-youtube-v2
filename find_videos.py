@@ -72,9 +72,11 @@ class GetPosts:
             handler.write(img_data)
 
     def get_length(filename):
-        result = subprocess.run(["ffprobe", "-v", "error", "-show_entries",
-                                "format=duration", "-of",
-                                "default=noprint_wrappers=1:nokey=1", filename],
+        cmd_list = ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of",
+                    "default=noprint_wrappers=1:nokey=1", filename]
+        print(f'Get Length: {" ".join(cmd_list)}')
+        result = subprocess.run(
+            cmd_list,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT)
         return float(result.stdout)
